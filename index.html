@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>INCH BY INCH KALOOR | Elite Fitness Solutions</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=JetBrains+Mono:wght@600&family=Hanken+Grotesk:wght@400;500;700&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@100..900&family=JetBrains+Mono:wght@100..900&family=Montserrat:wght@100..900&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary": "#ae0011",
+                    "muted-gray": "#767676",
+                    "outline-variant": "#e6bdb8",
+                    "secondary": "#5f5e5e",
+                    "primary-fixed-dim": "#ffb4ab",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#82fc90",
+                    "surface-bright": "#f9f9f9",
+                    "on-surface": "#1a1c1c",
+                    "secondary-container": "#e2dfde",
+                    "secondary-fixed": "#e5e2e1",
+                    "inverse-surface": "#2f3131",
+                    "on-secondary-fixed-variant": "#474746",
+                    "outline": "#926f6b",
+                    "tertiary-fixed-dim": "#65df77",
+                    "on-primary-fixed-variant": "#93000d",
+                    "primary-container": "#d71920",
+                    "on-secondary": "#ffffff",
+                    "on-secondary-container": "#636262",
+                    "surface-tint": "#c00014",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface": "#f9f9f9",
+                    "on-error": "#ffffff",
+                    "stadium-white": "#FFFFFF",
+                    "surface-container-low": "#f3f3f3",
+                    "tertiary-container": "#007e2f",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "surface-container-high": "#e8e8e8",
+                    "on-tertiary-fixed": "#002107",
+                    "background": "#f9f9f9",
+                    "tertiary": "#006223",
+                    "on-primary": "#ffffff",
+                    "on-background": "#1a1c1c",
+                    "primary-fixed": "#ffdad6",
+                    "on-primary-fixed": "#410002",
+                    "on-surface-variant": "#5d3f3c",
+                    "on-tertiary": "#ffffff",
+                    "inverse-primary": "#ffb4ab",
+                    "on-tertiary-container": "#c0ffbf",
+                    "on-primary-container": "#ffece9",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-container": "#eeeeee",
+                    "on-secondary-fixed": "#1c1b1b",
+                    "action-red-hover": "#B3151A",
+                    "surface-dim": "#dadada",
+                    "on-error-container": "#93000a",
+                    "surface-variant": "#e2e2e2",
+                    "on-tertiary-fixed-variant": "#00531c",
+                    "error": "#ba1a1a",
+                    "surface-container-lowest": "#ffffff",
+                    "deep-charcoal": "#121212"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "stack-lg": "32px",
+                    "container-max": "1280px",
+                    "stack-sm": "8px",
+                    "section-gap": "80px",
+                    "gutter": "24px",
+                    "stack-md": "16px",
+                    "margin-mobile": "16px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Montserrat"],
+                    "label-caps": ["JetBrains Mono"],
+                    "headline-xl": ["Montserrat"],
+                    "headline-md": ["Montserrat"],
+                    "headline-lg-mobile": ["Montserrat"],
+                    "cta-label": ["Montserrat"],
+                    "body-md": ["Hanken Grotesk"],
+                    "body-lg": ["Hanken Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg": ["40px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "label-caps": ["12px", {"lineHeight": "1.0", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                    "headline-xl": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "800"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "700"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "cta-label": ["16px", {"lineHeight": "1.0", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+            color: transparent;
+        }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-deep-charcoal text-stadium-white font-body-md overflow-x-hidden">
+<!-- TopNavBar -->
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-gutter py-4 bg-deep-charcoal max-w-container-max mx-auto border-b border-outline-variant/10">
+<a href="#" class="flex items-center gap-3">
+    <img src="logo.png" alt="INCH BY INCH Logo" class="h-10 md:h-12 w-auto rounded object-contain border border-outline-variant/10 shadow-md">
+    <span class="font-headline-md text-headline-md font-bold text-primary tracking-tighter hidden sm:inline">INCH BY INCH KALOOR</span>
+</a>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="font-cta-label text-cta-label uppercase text-stadium-white/80 font-medium hover:text-primary hover:scale-105 transition-all" href="#facilities">Facilities</a>
+<a class="font-cta-label text-cta-label uppercase text-stadium-white/80 font-medium hover:text-primary hover:scale-105 transition-all" href="#classes">Classes</a>
+<a class="font-cta-label text-cta-label uppercase text-stadium-white/80 font-medium hover:text-primary hover:scale-105 transition-all" href="#pricing">Pricing</a>
+<a class="font-cta-label text-cta-label uppercase text-stadium-white/80 font-medium hover:text-primary hover:scale-105 transition-all" href="#location">Contact</a>
+</nav>
+<button class="bg-primary-container text-on-primary font-cta-label text-cta-label uppercase px-6 py-3 hover:bg-action-red-hover active:scale-95 transition-all">
+            JOIN NOW
+        </button>
+</header>
+<!-- Hero Section -->
+<section class="relative min-h-[85vh] flex items-center pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<div class="absolute inset-0 bg-gradient-to-r from-deep-charcoal via-deep-charcoal/80 to-transparent z-10"></div>
+<img alt="High-performance gym environment" class="w-full h-full object-cover grayscale opacity-60" src="https://lh3.googleusercontent.com/aida/AP1WRLsgGG5vgO2n8lxJQTB4L7BzUyu52GksFrDpkAfDhSzeqqgXFInz9bqfHpaPRjKBCBI_flYnx3W7jBX-FlLbm6n4gVU8nQtbkE0tj9RYtXIfd9sD7CQV_ONAeg8RKBeOeYMMwKcrCseGY-qxCX8J15jwroYDh63S1mLrUp4GUIt0IAqIo2Zwr57tWbXvJ3-D-rHLZ732km-y-0W9qBCuV1e4TSJASqvjCNqvUUplxMBMoQ_-P_XUR1NdKcmh"/>
+</div>
+<div class="container mx-auto px-gutter relative z-20 max-w-container-max">
+<div class="max-w-3xl">
+<span class="inline-block px-3 py-1 bg-primary text-stadium-white font-label-caps text-label-caps mb-6">PREMIUM ATHLETIC CLUB</span>
+<h1 class="font-headline-xl text-headline-xl mb-6 leading-none">
+                    INCH BY INCH <br/>
+<span class="text-primary">FITNESS KALOOR</span>
+</h1>
+<p class="font-body-lg text-body-lg text-stadium-white/70 mb-10 max-w-xl">
+                    Elite training solutions in the heart of Mamangalam. Experience high-performance facilities and expert coaching designed for the modern athlete.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<button class="bg-primary text-stadium-white font-cta-label text-cta-label uppercase px-8 py-4 hover:bg-action-red-hover transition-all border border-primary">
+                        ENQUIRE TODAY
+                    </button>
+<button class="bg-transparent text-stadium-white font-cta-label text-cta-label uppercase px-8 py-4 border border-stadium-white/40 hover:bg-stadium-white/10 transition-all">
+                        TRY US FOR FREE
+                    </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Innovative Fitness Solutions -->
+<section class="py-section-gap bg-surface-container-lowest/5">
+<div class="container mx-auto px-gutter max-w-container-max">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+<div class="relative">
+<div class="absolute -top-10 -left-10 text-9xl font-headline-xl text-stroke opacity-10 select-none">01</div>
+<h2 class="font-headline-lg text-headline-lg mb-6">THE APEX OF PERFORMANCE</h2>
+<p class="font-body-lg text-body-lg text-muted-gray mb-8">
+                        Our philosophy is built on the foundation of discipline and elite results. We provide an environment where high-end training meets architectural clean design, fostering a community of dedicated athletes.
+                    </p>
+<ul class="space-y-4">
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Scientific progression tracking for measurable results.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Elite coaching staff with international certifications.</span>
+</li>
+<li class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<span class="font-body-md text-body-md">Recovery-focused amenities to maximize longevity.</span>
+</li>
+</ul>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-4 pt-12">
+<div class="bg-primary p-1">
+<div class="aspect-square bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-500" data-alt="Close up of high-end chrome weight plates stacked neatly in a modern training facility, moody industrial lighting, deep shadows, professional fitness vibe." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD8rHMmnrtm_kd2ex_CH_9d7vQUv3RcZ1cvqidlIjZbXZzjyEmJE8LFvKkRLhdlLto3_zYJXJqnqGvn9PeBZueOVus3Mb304FYDh0oDNqftV4ZKLKz0TztWSQPbznf31OyrfH9q3MyKYQ846BRqb2lJhEclcZZWmE4Jtbj81ApWaIduVVLfoD26SXD1o3HtPRMO9hbEWDBvYyC7yAP6FapB3ISVfifZwMNzdlPnzVOkiMxdH1AZHAGDmg')"></div>
+</div>
+<div class="bg-muted-gray/20 p-1">
+<div class="aspect-[3/4] bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-500" data-alt="Athletic male trainer with tattoos holding a stopwatch, intense focus, dark gym setting with sharp red rim lighting, high-contrast professional photography." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDD9M6YgA1cTk14UAPOHsKT_6r8RdOlw1B-El1lcWXTsLmkynn196MbPfwhrV17DEe9rYmQyJbXCPeKMkUO9wjhHjPvT__wRhYihR_jkKuunmtiBzXdP2r4UDSjtJwE0H7YEDecI-iP_QyXgfc4o_nNgjZaclmigS2Nutke4b0yYjqhJ-A-CP64Aw0pJ4tWedtT23cbsyehEGX_o9RoLVhYPsffqWRmupIYzFdKXUsMlIMNqZJBXIT_yw')"></div>
+</div>
+</div>
+<div class="space-y-4">
+<div class="bg-muted-gray/20 p-1">
+<div class="aspect-[3/4] bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-500" data-alt="Modern minimalist gym interior with tall windows, black architectural lines, high-end cardio equipment, bright natural light contrasting with dark surfaces." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC94ZwMWX7WJ9wcVhtPROIBfDXX7u2Nb6PwZzyJSaLwNprCMJgdF9arLS7iKczsxR-jqRqUo4QvBS8eR7Nayf9BR1E6GkOCa9JneNeZN2TEIPelF6MQ7KOkDgueZ4nHMIAhu-jzQ4J0TqmphIyFN-W6BivtC3DelEgeMI_LPZ_mjEJ8ilafe1SZhemLQMT5PxFPVhfVia00lv3dGTbaEaZitt94LcvGgH0sOI2RwAn9KolKjpfrpH5MBw')"></div>
+</div>
+<div class="bg-primary p-1">
+<div class="aspect-square bg-cover bg-center grayscale hover:grayscale-0 transition-all duration-500" data-alt="Hands of an athlete being wrapped with red boxing tape, close-up shot, intense detail on texture, moody lighting, elite performance preparation aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDztNLcOC75FZ8Zdt9eGo4ItQWL91NqPoC65yN5Fr_MgoX4-H9ruTXY5rmb6UlOeQLVRqZuHo5ZfpjVwWa6xBcXKi8Qd4E1aoF2UsO89hBgCTRCFyYGbuX3IAVlmgKmYbWK_211BiV8Svm38VEhwzZ1Zhtbct3HVn5Pjvd9gX0HR5jMX3-mQAe65UZoRWtq26i1vmUtlo32POP4poWqS64UyjY3FOINGep6WRacUWWjsGuQS9rLIjxlZA')"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Membership Tiers -->
+<section class="py-section-gap bg-deep-charcoal border-y border-outline-variant/5" id="pricing">
+<div class="container mx-auto px-gutter max-w-container-max text-center mb-16">
+<h2 class="font-headline-lg text-headline-lg mb-4">MEMBERSHIP TIERS</h2>
+<p class="text-muted-gray font-body-md max-w-xl mx-auto">Choose the level of commitment that matches your ambition. No hidden fees, just pure performance.</p>
+</div>
+<div class="container mx-auto px-gutter max-w-container-max grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Basic -->
+<div class="border border-outline/20 p-8 flex flex-col hover:border-primary transition-colors duration-300">
+<span class="font-label-caps text-label-caps text-muted-gray mb-4">ESSENTIALS</span>
+<h3 class="font-headline-md text-headline-md mb-2">BASIC</h3>
+<div class="mb-8">
+<span class="text-4xl font-bold">₹1,999</span>
+<span class="text-muted-gray">/mo</span>
+</div>
+<ul class="space-y-4 mb-12 text-left flex-grow">
+<li class="flex items-center gap-3 text-muted-gray"><span class="material-symbols-outlined text-sm">check</span> Gym Floor Access</li>
+<li class="flex items-center gap-3 text-muted-gray"><span class="material-symbols-outlined text-sm">check</span> Locker Access</li>
+<li class="flex items-center gap-3 text-muted-gray"><span class="material-symbols-outlined text-sm">check</span> Basic Fitness Assessment</li>
+</ul>
+<button class="w-full py-4 border border-stadium-white/20 font-cta-label uppercase hover:bg-stadium-white hover:text-deep-charcoal transition-all">SELECT PLAN</button>
+</div>
+<!-- Pro -->
+<div class="border-2 border-primary p-8 flex flex-col relative transform md:-translate-y-4 shadow-xl shadow-primary/10">
+<div class="absolute top-0 right-8 -translate-y-1/2 bg-primary text-stadium-white px-3 py-1 font-label-caps text-[10px]">MOST POPULAR</div>
+<span class="font-label-caps text-label-caps text-primary mb-4">ATHLETE</span>
+<h3 class="font-headline-md text-headline-md mb-2">PRO</h3>
+<div class="mb-8">
+<span class="text-4xl font-bold">₹3,499</span>
+<span class="text-muted-gray">/mo</span>
+</div>
+<ul class="space-y-4 mb-12 text-left flex-grow">
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check</span> Full Club Access</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check</span> All Group Classes</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check</span> Personal Training Intro</li>
+<li class="flex items-center gap-3"><span class="material-symbols-outlined text-primary">check</span> Monthly Bio-Analysis</li>
+</ul>
+<button class="w-full py-4 bg-primary text-stadium-white font-cta-label uppercase hover:bg-action-red-hover transition-all">SELECT PLAN</button>
+</div>
+<!-- Elite -->
+<div class="border border-outline/20 p-8 flex flex-col hover:border-primary transition-colors duration-300">
+<span class="font-label-caps text-label-caps text-muted-gray mb-4">CHAMPION</span>
+<h3 class="font-headline-md text-headline-md mb-2">ELITE</h3>
+<div class="mb-8">
+<span class="text-4xl font-bold">₹5,999</span>
+<span class="text-muted-gray">/mo</span>
+</div>
+<ul class="space-y-4 mb-12 text-left flex-grow">
+<li class="flex items-center gap-3 text-muted-gray"><span class="material-symbols-outlined text-sm">check</span> 24/7 Access</li>
+<li class="flex items-center gap-3 text-muted-gray"><span class="material-symbols-outlined text-sm">check</span> Priority Class Booking</li>
+<li class="flex items-center gap-3 text-muted-gray"><span class="material-symbols-outlined text-sm">check</span> Recovery Spa Access</li>
+<li class="flex items-center gap-3 text-muted-gray"><span class="material-symbols-outlined text-sm">check</span> Dedicated Locker & Laundry</li>
+</ul>
+<button class="w-full py-4 border border-stadium-white/20 font-cta-label uppercase hover:bg-stadium-white hover:text-deep-charcoal transition-all">SELECT PLAN</button>
+</div>
+</div>
+</section>
+<!-- Class Schedule -->
+<section class="py-section-gap" id="classes">
+<div class="container mx-auto px-gutter max-w-container-max">
+<div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-2">HIGH-OCTANE CLASSES</h2>
+<p class="text-muted-gray">Engineered for performance. Scheduled for your life.</p>
+</div>
+<div class="flex gap-2 bg-muted-gray/10 p-1">
+<button class="px-6 py-2 bg-primary text-stadium-white font-label-caps">WEEKDAY</button>
+<button class="px-6 py-2 text-muted-gray font-label-caps hover:text-stadium-white transition-colors">WEEKEND</button>
+</div>
+</div>
+<div class="space-y-1">
+<!-- Class Row -->
+<div class="group grid grid-cols-1 md:grid-cols-4 gap-4 p-6 border-b border-outline/10 hover:bg-primary/5 transition-colors cursor-pointer">
+<div class="font-label-caps text-primary">06:00 AM - 07:00 AM</div>
+<div class="md:col-span-2">
+<h4 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Metabolic Overdrive</h4>
+<p class="text-muted-gray">High-intensity conditioning to ignite your fat-burning engine.</p>
+</div>
+<div class="text-right flex items-center justify-end">
+<span class="px-3 py-1 border border-primary/40 text-[10px] font-label-caps text-primary">ADVANCED</span>
+</div>
+</div>
+<!-- Class Row -->
+<div class="group grid grid-cols-1 md:grid-cols-4 gap-4 p-6 border-b border-outline/10 hover:bg-primary/5 transition-colors cursor-pointer">
+<div class="font-label-caps text-primary">08:30 AM - 09:30 AM</div>
+<div class="md:col-span-2">
+<h4 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Vinyasa Flow Elite</h4>
+<p class="text-muted-gray">Precision mobility and core stability for athletic longevity.</p>
+</div>
+<div class="text-right flex items-center justify-end">
+<span class="px-3 py-1 border border-stadium-white/20 text-[10px] font-label-caps text-muted-gray">ALL LEVELS</span>
+</div>
+</div>
+<!-- Class Row -->
+<div class="group grid grid-cols-1 md:grid-cols-4 gap-4 p-6 border-b border-outline/10 hover:bg-primary/5 transition-colors cursor-pointer">
+<div class="font-label-caps text-primary">05:30 PM - 06:30 PM</div>
+<div class="md:col-span-2">
+<h4 class="font-headline-md text-headline-md group-hover:text-primary transition-colors">Compound Power</h4>
+<p class="text-muted-gray">Strength training focused on big movements: Squat, Bench, Deadlift.</p>
+</div>
+<div class="text-right flex items-center justify-end">
+<span class="px-3 py-1 border border-primary/40 text-[10px] font-label-caps text-primary">INTERMEDIATE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Inside This Club / Facilities -->
+<section class="py-section-gap bg-surface-container-high/5" id="facilities">
+<div class="container mx-auto px-gutter max-w-container-max">
+<h2 class="font-headline-lg text-headline-lg mb-12 text-center">ELITE FACILITIES</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6">
+<!-- Facility 1 -->
+<div class="flex flex-col items-center p-6 border border-outline/10 hover:border-primary/40 transition-all group">
+<span class="material-symbols-outlined text-4xl mb-4 group-hover:text-primary transition-colors" data-icon="fitness_center">fitness_center</span>
+<span class="font-label-caps text-xs text-center">GYM FLOOR</span>
+</div>
+<!-- Facility 2 -->
+<div class="flex flex-col items-center p-6 border border-outline/10 hover:border-primary/40 transition-all group">
+<span class="material-symbols-outlined text-4xl mb-4 group-hover:text-primary transition-colors" data-icon="directions_run">directions_run</span>
+<span class="font-label-caps text-xs text-center">CARDIO AREA</span>
+</div>
+<!-- Facility 3 -->
+<div class="flex flex-col items-center p-6 border border-outline/10 hover:border-primary/40 transition-all group">
+<span class="material-symbols-outlined text-4xl mb-4 group-hover:text-primary transition-colors" data-icon="pedal_bike">pedal_bike</span>
+<span class="font-label-caps text-xs text-center">CYCLE STUDIO</span>
+</div>
+<!-- Facility 4 -->
+<div class="flex flex-col items-center p-6 border border-outline/10 hover:border-primary/40 transition-all group">
+<span class="material-symbols-outlined text-4xl mb-4 group-hover:text-primary transition-colors" data-icon="exercise">exercise</span>
+<span class="font-label-caps text-xs text-center">FREE WEIGHTS</span>
+</div>
+<!-- Facility 5 -->
+<div class="flex flex-col items-center p-6 border border-outline/10 hover:border-primary/40 transition-all group">
+<span class="material-symbols-outlined text-4xl mb-4 group-hover:text-primary transition-colors" data-icon="hot_tub">hot_tub</span>
+<span class="font-label-caps text-xs text-center">STEAM ROOM</span>
+</div>
+<!-- Facility 6 -->
+<div class="flex flex-col items-center p-6 border border-outline/10 hover:border-primary/40 transition-all group">
+<span class="material-symbols-outlined text-4xl mb-4 group-hover:text-primary transition-colors" data-icon="self_improvement">self_improvement</span>
+<span class="font-label-caps text-xs text-center">YOGA STUDIO</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Location & Hours -->
+<section class="py-section-gap overflow-hidden" id="location">
+<div class="container mx-auto px-gutter max-w-container-max">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+<div>
+<h2 class="font-headline-lg text-headline-lg mb-8">LOCATE US</h2>
+<div class="space-y-12">
+<div>
+<p class="font-label-caps text-primary mb-2">ADDRESS</p>
+<p class="text-headline-md font-headline-md leading-tight">Desabhimani Rd, Mamangalam,<br/> Elamakkara, Ernakulam,<br/> Kerala 682017</p>
+</div>
+<div>
+<p class="font-label-caps text-primary mb-4">OPERATING HOURS</p>
+<div class="space-y-3">
+<div class="flex justify-between border-b border-outline/10 pb-2">
+<span class="text-muted-gray">Monday - Friday</span>
+<span>05:30 AM - 10:30 PM</span>
+</div>
+<div class="flex justify-between border-b border-outline/10 pb-2">
+<span class="text-muted-gray">Saturday</span>
+<span>06:00 AM - 09:00 PM</span>
+</div>
+<div class="flex justify-between border-b border-outline/10 pb-2">
+<span class="text-muted-gray">Sunday</span>
+<span>08:00 AM - 01:00 PM</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-primary/10 blur-3xl opacity-0 group-hover:opacity-100 transition-opacity"></div>
+<div class="relative bg-surface-container p-4 border border-outline/20">
+<!-- Placeholder for a map -->
+<div class="aspect-square bg-deep-charcoal relative overflow-hidden">
+<div class="w-full h-full grayscale opacity-70" data-location="Mamangalam, Kochi" style="">
+<iframe frameborder="0" height="100%" marginheight="0" marginwidth="0" scrolling="no" src="https://maps.google.com/maps?q=Inch%20by%20Inch%20Fitness%20Kaloor%20Mamangalam&t=&z=15&ie=UTF8&iwloc=&output=embed" width="100%">
+</iframe>
+</div>
+<div class="absolute bottom-6 left-6 bg-primary text-stadium-white p-4 shadow-2xl">
+<p class="font-label-caps text-[10px]">FIND YOUR MOMENTUM</p>
+<p class="font-headline-md text-headline-md">GET DIRECTIONS</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-stack-lg px-gutter flex flex-col md:flex-row justify-between items-center gap-stack-md bg-deep-charcoal border-t border-secondary">
+<div class="flex items-center gap-3">
+    <img src="logo.png" alt="INCH BY INCH Logo" class="h-10 w-auto rounded object-contain border border-outline-variant/10 shadow-sm">
+    <span class="font-headline-md text-headline-md font-bold text-primary tracking-tighter hidden sm:inline">INCH BY INCH KALOOR</span>
+</div>
+<div class="flex flex-col items-center md:items-end gap-4">
+<nav class="flex gap-6">
+<a class="font-body-md text-body-md text-muted-gray hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-muted-gray hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-muted-gray hover:text-primary transition-colors" href="#">Member Portal</a>
+</nav>
+<p class="font-body-md text-body-md text-muted-gray text-center md:text-right">
+                © 2024 INCH BY INCH FITNESS KALOOR. ALL RIGHTS RESERVED.
+            </p>
+</div>
+</footer>
+<!-- Join / Enquiry Modal -->
+<div id="joinModal" class="fixed inset-0 z-[100] flex items-center justify-center bg-black/85 backdrop-blur-sm hidden transition-opacity duration-300 opacity-0">
+  <div class="relative bg-deep-charcoal border border-outline-variant/20 max-w-md w-full p-8 rounded-lg shadow-2xl mx-4 transform transition-transform duration-300 scale-95" id="modalContent">
+    
+    <!-- Close Button -->
+    <button id="closeModal" class="absolute top-4 right-4 text-muted-gray hover:text-stadium-white transition-colors">
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    
+    <!-- Modal Header -->
+    <div class="text-center mb-8">
+      <img src="logo.png" alt="INCH BY INCH Logo" class="h-16 w-auto mx-auto mb-4 rounded object-contain border border-outline-variant/10 shadow-md">
+      <h3 class="font-headline-md text-headline-md text-primary uppercase">Join the Elite Club</h3>
+      <p class="text-muted-gray text-body-md mt-2">Start your athletic journey with professional coaching.</p>
+    </div>
+    
+    <!-- Modal Form -->
+    <form id="joinForm" class="space-y-6">
+      <div>
+        <label for="memberName" class="block font-label-caps text-label-caps text-stadium-white mb-2">FULL NAME</label>
+        <input type="text" id="memberName" required class="w-full bg-surface-container-low border border-outline/20 px-4 py-3 rounded text-stadium-white focus:outline-none focus:border-primary transition-colors font-body-md" placeholder="Enter your full name">
+      </div>
+      
+      <div>
+        <label for="memberEmail" class="block font-label-caps text-label-caps text-stadium-white mb-2">EMAIL ADDRESS</label>
+        <input type="email" id="memberEmail" required class="w-full bg-surface-container-low border border-outline/20 px-4 py-3 rounded text-stadium-white focus:outline-none focus:border-primary transition-colors font-body-md" placeholder="name@example.com">
+      </div>
+      
+      <div>
+        <label for="memberPhone" class="block font-label-caps text-label-caps text-stadium-white mb-2">PHONE NUMBER</label>
+        <input type="tel" id="memberPhone" required class="w-full bg-surface-container-low border border-outline/20 px-4 py-3 rounded text-stadium-white focus:outline-none focus:border-primary transition-colors font-body-md" placeholder="+91 XXXXX XXXXX">
+      </div>
+      
+      <div>
+        <label for="memberPlan" class="block font-label-caps text-label-caps text-stadium-white mb-2">SELECT PLAN</label>
+        <select id="memberPlan" class="w-full bg-surface-container-low border border-outline/20 px-4 py-3 rounded text-stadium-white focus:outline-none focus:border-primary transition-colors font-body-md select-dark">
+          <option value="basic">BASIC (₹1,999 / month)</option>
+          <option value="pro" selected>PRO (₹3,499 / month)</option>
+          <option value="elite">ELITE (₹5,999 / month)</option>
+        </select>
+      </div>
+      
+      <button type="submit" class="w-full bg-primary text-stadium-white font-cta-label text-cta-label uppercase py-4 hover:bg-action-red-hover active:scale-95 transition-all">
+        SUBMIT MEMBERSHIP ENQUIRY
+      </button>
+    </form>
+    
+    <!-- Success State (hidden initially) -->
+    <div id="successState" class="hidden text-center py-8 space-y-6">
+      <div class="w-20 h-20 bg-primary/10 border border-primary text-primary rounded-full flex items-center justify-center mx-auto">
+        <span class="material-symbols-outlined text-5xl">check_circle</span>
+      </div>
+      <h3 class="font-headline-md text-headline-md text-primary uppercase">YOU'RE IN!</h3>
+      <p class="text-stadium-white text-body-lg">
+        Enquiry submitted successfully for the <span id="selectedPlanName" class="text-primary font-bold">PRO</span> membership.
+      </p>
+      <p class="text-muted-gray text-body-md max-w-sm mx-auto">
+        A personal fitness advisor will call you within 2 hours to confirm details and finalize your gym induction.
+      </p>
+      <button id="closeSuccess" class="bg-transparent border border-stadium-white/20 text-stadium-white font-cta-label text-cta-label uppercase px-8 py-3 hover:bg-stadium-white hover:text-deep-charcoal transition-all">
+        CLOSE WINDOW
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Controller & Micro-interaction Script -->
+<script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Modal Elements
+            const modal = document.getElementById('joinModal');
+            const modalContent = document.getElementById('modalContent');
+            const closeModalBtn = document.getElementById('closeModal');
+            const joinForm = document.getElementById('joinForm');
+            const successState = document.getElementById('successState');
+            const selectedPlanName = document.getElementById('selectedPlanName');
+            const closeSuccessBtn = document.getElementById('closeSuccess');
+            const planSelect = document.getElementById('memberPlan');
+
+            // Open Modal function
+            const openModal = (defaultPlan = 'pro') => {
+                planSelect.value = defaultPlan;
+                
+                modal.classList.remove('hidden');
+                setTimeout(() => {
+                    modal.classList.add('opacity-100');
+                    modalContent.classList.remove('scale-95');
+                    modalContent.classList.add('scale-100');
+                }, 10);
+            };
+
+            // Close Modal function
+            const closeModal = () => {
+                modal.classList.remove('opacity-100');
+                modalContent.classList.remove('scale-100');
+                modalContent.classList.add('scale-95');
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    joinForm.classList.remove('hidden');
+                    successState.classList.add('hidden');
+                    joinForm.reset();
+                }, 300);
+            };
+
+            // Attach event listeners to all triggers
+            // 1. Header JOIN NOW
+            const headerJoinBtn = document.querySelector('header button');
+            if (headerJoinBtn) {
+                headerJoinBtn.addEventListener('click', () => openModal('pro'));
+            }
+
+            // 2. Hero CTAs
+            const heroEnquire = document.querySelector('section:first-of-type button:first-of-type');
+            const heroTry = document.querySelector('section:first-of-type button:last-of-type');
+            if (heroEnquire) {
+                heroEnquire.addEventListener('click', () => openModal('pro'));
+            }
+            if (heroTry) {
+                heroTry.addEventListener('click', () => openModal('basic'));
+            }
+
+            // 3. Pricing Plan Buttons
+            const selectButtons = document.querySelectorAll('#pricing button');
+            selectButtons.forEach((btn, index) => {
+                let planVal = 'pro';
+                if (index === 0) planVal = 'basic';
+                if (index === 2) planVal = 'elite';
+                btn.addEventListener('click', () => openModal(planVal));
+            });
+
+            // Close actions
+            closeModalBtn.addEventListener('click', closeModal);
+            closeSuccessBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) closeModal();
+            });
+
+            // Form Submit action
+            joinForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                
+                const selectedOption = planSelect.options[planSelect.selectedIndex].text;
+                selectedPlanName.innerText = selectedOption.split(' (')[0];
+
+                joinForm.classList.add('hidden');
+                successState.classList.remove('hidden');
+            });
+
+            // Intersection Observer scroll animation
+            const observerOptions = {
+                threshold: 0.1
+            };
+
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('opacity-100', 'translate-y-0');
+                        entry.target.classList.remove('opacity-0', 'translate-y-10');
+                    }
+                });
+            }, observerOptions);
+
+            document.querySelectorAll('section > div').forEach(el => {
+                el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+                observer.observe(el);
+            });
+        });
+    </script>
+</body></html>
