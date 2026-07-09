@@ -563,11 +563,35 @@
             joinForm.addEventListener('submit', (e) => {
                 e.preventDefault();
                 
-                const selectedOption = planSelect.options[planSelect.selectedIndex].text;
-                selectedPlanName.innerText = selectedOption.split(' (')[0];
+                const name = document.getElementById('memberName').value;
+                const email = document.getElementById('memberEmail').value;
+                const phone = document.getElementById('memberPhone').value;
+                const plan = planSelect.value;
 
-                joinForm.classList.add('hidden');
-                successState.classList.remove('hidden');
+                // Send data to Express backend
+                fetch('/submit-enquiry', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, phone, plan })
+                })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success) {
+                        const selectedOption = planSelect.options[planSelect.selectedIndex].text;
+                        selectedPlanName.innerText = selectedOption.split(' (')[0];
+
+                        joinForm.classList.add('hidden');
+                        successState.classList.remove('hidden');
+                    } else {
+                        alert('Error saving enquiry: ' + (data.error || 'Unknown error'));
+                    }
+                })
+                .catch(err => {
+                    console.error('Error submitting enquiry:', err);
+                    alert('Failed to submit enquiry. Please try again.');
+                });
             });
 
             // Intersection Observer scroll animation

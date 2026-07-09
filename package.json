@@ -1,0 +1,12 @@
+{
+  "name": "inch_by_inch_fitness",
+  "version": "1.0.0",
+  "description": "Inch by Inch Fitness Landing Page and Enquiry Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
