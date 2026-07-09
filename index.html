@@ -439,25 +439,26 @@
     </div>
     
     <!-- Modal Form -->
-    <form id="joinForm" class="space-y-6">
+    <form id="joinForm" name="joinForm" data-netlify="true" class="space-y-6">
+      <input type="hidden" name="form-name" value="joinForm">
       <div>
         <label for="memberName" class="block font-label-caps text-label-caps text-stadium-white mb-2">FULL NAME</label>
-        <input type="text" id="memberName" required class="w-full bg-surface-container-low border border-outline/20 px-4 py-3 rounded text-stadium-white focus:outline-none focus:border-primary transition-colors font-body-md" placeholder="Enter your full name">
+        <input type="text" id="memberName" name="memberName" required class="w-full bg-surface-container-low border border-outline/20 px-4 py-3 rounded text-stadium-white focus:outline-none focus:border-primary transition-colors font-body-md" placeholder="Enter your full name">
       </div>
       
       <div>
         <label for="memberEmail" class="block font-label-caps text-label-caps text-stadium-white mb-2">EMAIL ADDRESS</label>
-        <input type="email" id="memberEmail" required class="w-full bg-surface-container-low border border-outline/20 px-4 py-3 rounded text-stadium-white focus:outline-none focus:border-primary transition-colors font-body-md" placeholder="name@example.com">
+        <input type="email" id="memberEmail" name="memberEmail" required class="w-full bg-surface-container-low border border-outline/20 px-4 py-3 rounded text-stadium-white focus:outline-none focus:border-primary transition-colors font-body-md" placeholder="name@example.com">
       </div>
       
       <div>
         <label for="memberPhone" class="block font-label-caps text-label-caps text-stadium-white mb-2">PHONE NUMBER</label>
-        <input type="tel" id="memberPhone" required class="w-full bg-surface-container-low border border-outline/20 px-4 py-3 rounded text-stadium-white focus:outline-none focus:border-primary transition-colors font-body-md" placeholder="+91 XXXXX XXXXX">
+        <input type="tel" id="memberPhone" name="memberPhone" required class="w-full bg-surface-container-low border border-outline/20 px-4 py-3 rounded text-stadium-white focus:outline-none focus:border-primary transition-colors font-body-md" placeholder="+91 XXXXX XXXXX">
       </div>
       
       <div>
         <label for="memberPlan" class="block font-label-caps text-label-caps text-stadium-white mb-2">SELECT PLAN</label>
-        <select id="memberPlan" class="w-full bg-surface-container-low border border-outline/20 px-4 py-3 rounded text-stadium-white focus:outline-none focus:border-primary transition-colors font-body-md select-dark">
+        <select id="memberPlan" name="memberPlan" class="w-full bg-surface-container-low border border-outline/20 px-4 py-3 rounded text-stadium-white focus:outline-none focus:border-primary transition-colors font-body-md select-dark">
           <option value="basic">BASIC (₹1,999 / month)</option>
           <option value="pro" selected>PRO (₹3,499 / month)</option>
           <option value="elite">ELITE (₹5,999 / month)</option>
@@ -568,30 +569,62 @@
                 const phone = document.getElementById('memberPhone').value;
                 const plan = planSelect.value;
 
-                // Send data to Express backend
-                fetch('/submit-enquiry', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ name, email, phone, plan })
-                })
-                .then(response => response.json())
-                .then(data => {
-                    if (data.success) {
-                        const selectedOption = planSelect.options[planSelect.selectedIndex].text;
-                        selectedPlanName.innerText = selectedOption.split(' (')[0];
+                const isLocalhost = window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1';
 
-                        joinForm.classList.add('hidden');
-                        successState.classList.remove('hidden');
-                    } else {
-                        alert('Error saving enquiry: ' + (data.error || 'Unknown error'));
-                    }
-                })
-                .catch(err => {
-                    console.error('Error submitting enquiry:', err);
-                    alert('Failed to submit enquiry. Please try again.');
-                });
+                const showSuccess = () => {
+                    const selectedOption = planSelect.options[planSelect.selectedIndex].text;
+                    selectedPlanName.innerText = selectedOption.split(' (')[0];
+                    joinForm.classList.add('hidden');
+                    successState.classList.remove('hidden');
+                };
+
+                if (isLocalhost) {
+                    // Send to local Express backend
+                    fetch('/submit-enquiry', {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({ name, email, phone, plan })
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.success) {
+                            showSuccess();
+                        } else {
+                            alert('Error saving enquiry: ' + (data.error || 'Unknown error'));
+                        }
+                    })
+                    .catch(err => {
+                        console.error('Error submitting enquiry:', err);
+                        alert('Failed to submit enquiry. Please try again.');
+                    });
+                } else {
+                    // Send to Netlify Forms (URL Encoded form data)
+                    const formData = new URLSearchParams();
+                    formData.append('form-name', 'joinForm');
+                    formData.append('memberName', name);
+                    formData.append('memberEmail', email);
+                    formData.append('memberPhone', phone);
+                    formData.append('memberPlan', plan);
+
+                    fetch('/', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: formData.toString()
+                    })
+                    .then(response => {
+                        if (response.ok) {
+                            showSuccess();
+                        } else {
+                            alert('Failed to submit enquiry to Netlify. Please try again.');
+                        }
+                    })
+                    .catch(err => {
+                        console.error('Netlify submit error:', err);
+                        alert('Failed to submit enquiry. Please try again.');
+                    });
+                }
             });
 
             // Intersection Observer scroll animation
